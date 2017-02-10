@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const router = new express.Router();
 const request = require('request-promise');
 const parser = require('xml2json');
@@ -13,4 +14,15 @@ router.get('/:artist/:song', (req, res, next) => {
       res.send({lyric});
     })
     .catch(next);
+=======
+const getLyrics = require('lyric-get').get;
+const router = new express.Router();
+module.exports = router;
+
+router.get('/:artist/:song', (req, res, next) => {
+    getLyrics(req.params.artist, req.params.song, (err, r) => {
+        if (err) return next(err);
+        res.send({ lyric: r });
+    });
+>>>>>>> 90969bde1b922ead430264943634ce3c4d7d22f6
 });
