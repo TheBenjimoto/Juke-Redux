@@ -10,8 +10,6 @@ import Songs from './components/Songs';
 import NewPlaylistContainer from './containers/NewPlaylistContainer';
 import Playlist from './components/Playlist';
 
-<<<<<<< HEAD
-=======
 import store from './store';
 import setLyrics from './action-creators/lyrics';
 
@@ -29,7 +27,6 @@ store.dispatch(setLyrics('Hello, darkness, my old friend.'));
 
 console.log('happened in silence', store.getState())
 
->>>>>>> 90969bde1b922ead430264943634ce3c4d7d22f6
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path='/' component={AppContainer} foo={'foo'}>
